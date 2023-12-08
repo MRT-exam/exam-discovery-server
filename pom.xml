@@ -17,6 +17,14 @@
 		<java.version>17</java.version>
 		<spring-cloud.version>2023.0.0</spring-cloud.version>
 	</properties>
+	<profiles>
+		<profile>
+			<id>docker</id>
+			<properties>
+				<active.profile>docker</active.profile>
+			</properties>
+		</profile>
+	</profiles>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -60,6 +68,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>discovery-server</finalName>
 	</build>
 
 </project>

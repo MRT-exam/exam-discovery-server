@@ -6,8 +6,10 @@ services:
       dockerfile: Dockerfile
     ports: 
       - "8761:8761"
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
     networks:
-      - order-service-net
+      - exam-mtgo
 
 networks:
-  order-service-net:
+  exam-mtgo:
